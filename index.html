@@ -20,7 +20,7 @@
     <!--normalize css-->
     <link rel="stylesheet" href="./styles/normalize.css" />
 
-    <!--custom css--> 
+    <!--custom css-->
 
     <link rel="stylesheet" href="./styles/style.css" />
 
@@ -28,43 +28,46 @@
     <script src="./scripts/script.js"></script>
   </head>
   <body>
-    <form id="form"
-    class="form">
+    <form id="form" class="form">
+      <h1 class="form-title">Registration Form</h1>
 
-    <h1 class="form-title">
-      Registration Form
-    </h1>
-    
-    <div class="form-control">
-      <label for="username">Username</label>
-      <input type="text" id="username" class="input" required minlength="5" maxlength="9"required>
-      <small class="error"></small>
-    </div>
+      <div class="form-control">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="input" />
+        <!-- required
+          minlength="5"
+          maxlength="9" -->
+        <small class="error"></small>
+      </div>
 
-    <div class="form-control">
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" class="input" required>
-      <small class="error">some error</small>
-    </div>
+      <div class="form-control">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" class="input" />
+        <small class="error">some error</small>
+      </div>
 
-    <div class="form-control">
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" class="input" required minlength="8" maxlength="16">
-      <small class="error"></small>
-    </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="input" />
 
-    <div class="form-control">
-      <label for="confirm-password">Confirm Password</label>
-      <input type="password" name="password" id="confirmpassword"
-      class="input" required minlength="8" maxlength="16">
-      <small class="error"></small>
-    </div>
+        <small class="error"></small>
+      </div>
 
-    <input type="submit" value="Submit" class="submit" id="btn-submit">
+      <div class="form-control">
+        <label for="confirm-password">Confirm Password</label>
+        <input
+          type="password"
+          name="password"
+          id="confirm-password"
+          class="input"
+        />
 
-</form>
+        <small class="error"></small>
+      </div>
 
-<script src="./script.js"></script>
+      <input type="submit" value="Submit" class="submit" id="btn-submit" />
+    </form>
+    <script src="./script.js"></script>
   </body>
 </html>
 

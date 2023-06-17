@@ -12,9 +12,9 @@
   --clr-white: #fff;
   --clr-sky-blue: #8ecae6ff;
   --clr-blue-green: #219ebcff;
-  --clr-prussian-blue:#023047ff;
-  --clr-selective-yellow:#ffb703ff;
-  --clr-ut-orange:#fb8500ff; 
+  --clr-prussian-blue: #023047ff;
+  --clr-selective-yellow: #ffb703ff;
+  --clr-ut-orange: #fb8500ff;
   --clr-red: #e63946;
   --clr-green: #34a0a4;
 }
@@ -24,7 +24,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -33,67 +33,78 @@ body{
   background-color: var(--clr-prussian-blue);
 }
 
-.form{
+.form {
   background-color: var(--clr-white);
   padding: 1.5rem;
   width: 24rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-bottom: 3  rem;
   border: 2px solid var(--clr-white);
-  border-radius: 0.50rem;
+  border-radius: 0.5rem;
 }
 
-.submit{
+.submit {
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 1.5rem;
   padding: 1rem;
-  border-radius: 0.25rem; 
+  border-radius: 0.25rem;
   background-color: var(--clr-prussian-blue);
   border: 2px solid var(--clr-prussian-blue);
   color: #fff;
-  transition: all 0.5s ease; 
+  transition: all 0.5s ease;
 }
 
-.submit:hover{
+.submit:hover {
   transform: translateY(-5px);
   cursor: pointer;
 }
 
-.form-control{
+.form-control {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   justify-content: center;
 }
 
-.form-title{
-  font: size 1.5rem;
+.form-title {
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.form-control label{
+.form-control {
   font-size: 1rem;
   font-weight: 600;
 }
 
-.input{
+.input {
   padding: 0.75rem 1.25rem;
+  border: 2px solid var(--clr-black);
   border-radius: 0.25rem;
   font-size: 1.25rem;
   font-weight: 600;
-} 
-
-input:focus{
-  border-color: var(--clr-blue-green);
+}
+.input:focus {
+  border-color: var(--clr-green);
 }
 
-.error{
+.input.success {
+  border: 3px solid rgb(21, 146, 21);
+}
+
+.input.error-input {
+  border: 3px solid var(--clr-red);
+}
+
+.error {
   font-size: 0.9rem;
   font-weight: 500;
-  color:#e63946;
+  color: #e63946;
   margin-left: 0.75rem;
   visibility: hidden;
-}  
+}
+
+.error-message {
+  visibility: visible;
+}
