@@ -52,15 +52,15 @@ const checkRequired = function (input, message) {
   }
 };
 // email should be proper method
-const isEmailAddress = function (str) {
-  var pattern = /^\w+ ([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2, 3})+$/;
-  return pattern.test(str);
-};
-const checkEmail = function (input) {
-  if (isEmailAddress(input.value.trim())) {
-    showSuccess(input);
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+const checkEmail = function (inputs) {
+  if (validateEmail(inputs.value.trim())) {
+    showSuccess(inputs);
   } else {
-    showErrorMessage(input, 'Enter a valid Email Address');
+    showErrorMessage(inputs, 'Enter a valid Email Address');
   }
 };
 //AddEventListener
@@ -95,6 +95,20 @@ formEl.addEventListener('submit', function (event) {
 
   //email
   checkEmail(emailInput);
+
+  //password matches to confirm password
+
+  const comparePassword = function (inputOne, inputTwo) {
+    if (inputOne.value.trim() === inputTwo.value.trim()) {
+      showSuccess(inputTwo);
+    } else {
+      showErrorMessage(
+        inputTwo,
+        'Password does not match with Confirm Password'
+      );
+    }
+  };
+  comparePassword(passwordInput, confirmPasswordInput);
 });
 
 //if success ---> clr changes
