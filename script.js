@@ -100,7 +100,7 @@ formEl.addEventListener('submit', function (event) {
 
   const comparePassword = function (inputOne, inputTwo) {
     if (inputOne.value.trim() === inputTwo.value.trim()) {
-      showSuccess(inputTwo);
+      showSuccess(confirmPasswordInput);
     } else {
       showErrorMessage(
         inputTwo,
