@@ -125,8 +125,9 @@ body {
   label {
     font-size: 16px;
   }
-  input {
+  .input {
     height: 20px;
+    font-size: 14px;
   }
   .submit {
     height: 40px;
@@ -155,6 +156,7 @@ body {
   }
   input {
     height: 50px;
+    font-size: 12px;
   }
   .submit {
     height: 80px;
