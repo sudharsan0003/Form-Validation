@@ -139,6 +139,13 @@ body {
   .pass {
     margin-top: -40px;
   }
+  .error {
+    font-size: 12pxrem;
+    font-weight: 500;
+    color: #e63946;
+    margin-left: 0.75rem;
+    visibility: hidden;
+  }
 }
 @media only screen and (min-width: 780px) {
   .form {
